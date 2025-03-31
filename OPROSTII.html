@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oprosti Ana</title>
+    <style>
+        body { 
+            background-color: #ADD8E6; /* Svijetlo plava pozadina */
+            text-align: center; 
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            color: black;
+        }
+        img {
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="text">OPROSTI 😭</h1>
+    <img id="button" src="https://github.com/Igorossowski/oprosti-ana/blob/main/sad.png" onclick="changeState()" width="200px">
+
+    <script>
+        let state = 0;
+        function changeState() {
+            let textElement = document.getElementById("text");
+            let buttonElement = document.getElementById("button");
+
+            let texts = ["OPROSTI 😭", "STVARNO MI JE ŽAO 🙏🙏", "KUPIT ĆU TI KANDI ANA OPROSTI PLLZZ"];
+            let images = [
+                "https://github.com/Igorossowski/oprosti-ana/blob/main/sad.png",
+                "https://github.com/Igorossowski/oprosti-ana/blob/main/sadder.png",
+                "https://github.com/Igorossowski/oprosti-ana/blob/main/saddie.png"
+            ];
+
+            state = (state + 1) % 3; // Petlja unedogled
+            textElement.innerText = texts[state];
+            buttonElement.src = images[state];
+        }
+    </script>
+
+</body>
+</html>
