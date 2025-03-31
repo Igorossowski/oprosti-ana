@@ -9,15 +9,34 @@
             background-color: #ADD8E6; /* Svijetlo plava pozadina */
             text-align: center; 
             font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
         }
         h1 {
             font-size: 50px;
             color: black;
+            margin-top: 50px;
         }
         img {
             cursor: pointer;
             margin-top: 20px;
             width: 200px;
+        }
+        .vjeverica {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .vjeverica img {
+            width: 80px;
+            height: auto;
+        }
+        .vjeverica p {
+            font-size: 14px;
+            color: black;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -25,6 +44,11 @@
 
     <h1 id="text">OPROSTI 😭</h1>
     <img id="button" src="https://raw.githubusercontent.com/Igorossowski/oprosti-ana/main/sad.png" onclick="changeState()">
+
+    <div class="vjeverica">
+        <img src="https://raw.githubusercontent.com/Igorossowski/oprosti-ana/main/vjeverica.png" alt="Vjeverica">
+        <p>Vjeverica prijateljstva<br>kao potpora</p>
+    </div>
 
     <script>
         let state = 0;
